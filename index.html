@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Akansha Naik • Python Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Akansha Naik — Python Developer (Flask, SQL, APIs) based in Pune, India."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0; font-family: 'Inter',sans-serif; background: #0f172a; color: #e5e7eb; line-height: 1.7;
+    }
+    header {
+      background: #0b1224; padding: 16px 5vw; position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    header h1 { margin: 0; font-size: 22px; color: #6ee7b7; letter-spacing: 2px; font-weight: bold;}
+    header nav a { margin-left:22px; color:#e5e7eb; text-decoration:none; font-weight:600; transition:.3s;}
+    header nav a:hover { color: #60a5fa; transform: translateY(-2px); }
+
+    /* Hero */
+    .hero {
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 44px;
+      padding: 72px 5vw 32px 5vw;
+      background: linear-gradient(135deg,#1e293b 46%,#2dd4bf 105%);
+      animation: fadeIn 1s ease-in;
+    }
+    .hero-text { flex: 1; min-width: 320px; animation: slideIn 1.2s ease-in; }
+    .hero-text h2 { font-size: 44px; margin: 0 0 18px; color: #6ee7b7;}
+    .hero-text p { color: #94a3b8; margin-bottom: 28px; font-size: 18px;}
+    .hero-text .btn {
+      display: inline-block; padding: 13px 28px; margin-top: 10px;
+      border-radius: 14px; font-weight: bold; text-decoration: none; font-size: 16px;
+      transition: .3s;
+    }
+    .btn-primary {background: #6ee7b7; color: #0b1224; box-shadow: 0 2px 12px #6ee7b768;}
+    .btn-primary:hover { background:#34d399; transform: translateY(-3px);}
+    .btn-secondary {border: 2px solid #60a5fa; color: #60a5fa;}
+    .btn-secondary:hover { background:#60a5fa; color:#0b1224; transform: translateY(-3px);}
+    .hero img {
+      max-width: 290px; width: 100%; border-radius: 50%;
+      border: 5px solid #60a5fa; box-shadow: 0 6px 24px #0006;
+      background:#fff;
+      animation: fadeIn 2s ease-in;
+    }
+
+    section {padding: 62px 5vw;}
+    section h2 { font-size: 28px; margin-bottom: 22px; color:#6ee7b7; font-weight: bold;}
+
+    /* Skills */
+    .skills .list {display: flex; flex-wrap: wrap; gap: 15px; margin-bottom:10px;}
+    .chip {
+      background: #1e293b; color: #cbd5e1; padding: 8px 18px; border-radius:999px;
+      font-size: 15px; border: 1px solid rgba(255,255,255,0.10); font-weight: 600;
+      transition:.3s;
+    }
+    .chip:hover { background:#334155; transform: scale(1.05); }
+
+    /* Projects */
+    .projects {display:grid;grid-template-columns:repeat(auto-fit,minmax(298px,1fr));gap:32px;}
+    .card {
+      background:#1e293b;padding:26px;border-radius:18px;
+      border:1px solid rgba(255,255,255,0.1);box-shadow:0 4px 24px #33415544;
+      transition:.3s;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow:0 8px 30px #0008; }
+    .card h3 {margin-top:0;font-size:22px;color:#60a5fa;}
+    .card p {color:#cbd5e1;margin-bottom:7px;}
+    .tech {font-size:13px;color:#6ee7b7;margin-top:7px;}
+
+    /* Contact Panels */
+    .contact {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;}
+    .panel {background:#1e293b;padding:22px;border-radius:16px;border:1px solid rgba(255,255,255,0.10);
+      transition:.3s;}
+    .panel:hover { transform: scale(1.05); border-color:#6ee7b7; }
+
+    footer {background:#0b1224;padding:24px;text-align:center;color:#94a3b8;}
+
+    /* Animations */
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    @keyframes slideIn { from {transform: translateX(-30px); opacity:0;} to {transform: translateX(0); opacity:1;} }
+
+    @media (max-width:900px){
+      .hero{flex-direction:column;}
+      .projects{grid-template-columns:1fr;}
+      section{padding:45px 7vw;}
+    }
+    @media (max-width:550px){
+      .hero-text h2{font-size:32px;}
+      header{padding:18px 10px;}
+      section{padding:18px 7vw;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Akansha Naik</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Hi, I'm Akansha 👩‍💻</h2>
+      <p>
+        Python Developer from Pune.<br>
+        Specialist in backend, API, and data systems.<br>
+        Completed BCA with CGPA 8.63.<br>
+        Currently undergoing Python Developer Training at <b>Adhyayan IT, Pune</b>.
+      </p>
+      <a href="#projects" class="btn btn-primary">See My Work</a>
+      <a href="Akansha_Naik_Resume_Pune_Color.pdf" class="btn btn-secondary" download>Download Resume</a>
+    </div>
+    <div>
+      <img src="profile.jpg" alt="Akansha Naik">
+    </div>
+  </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Completed <b>BCA (2025)</b> with strong academics (CGPA 8.63). Currently sharpening my expertise through 
+      <b>Python Developer Training at Adhyayan IT, Pune</b>.  
+      <br>Motivated and passionate about backend systems, APIs, and databases. Always curious to learn, 
+      experiment, and build scalable, secure software that solves real-world problems.
+    </p>
+  </section>
+  <section id="skills" class="skills">
+    <h2>Technical Skills</h2>
+    <div class="list">
+      <span class="chip">Python</span>
+      <span class="chip">Flask</span>
+      <span class="chip">Django (Learning)</span>
+      <span class="chip">REST APIs</span>
+      <span class="chip">MySQL</span>
+      <span class="chip">MongoDB</span>
+      <span class="chip">SQL</span>
+      <span class="chip">Java</span>
+      <span class="chip">C++</span>
+      <span class="chip">Git & GitHub</span>
+      <span class="chip">HTML</span>
+      <span class="chip">CSS</span>
+      <span class="chip">JavaScript</span>
+    </div>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Student Result Analysis System</h3>
+        <p>Flask & MySQL app to manage student results and visualize trends with Matplotlib. Reduced manual errors by 90%.</p>
+        <div class="tech">Python • Flask • MySQL • Matplotlib</div>
+      </div>
+      <div class="card">
+        <h3>Weather Forecasting App</h3>
+        <p>Desktop app that fetches real-time weather via OpenWeather API, displays clean UI with Tkinter.</p>
+        <div class="tech">Python • API • Tkinter</div>
+      </div>
+      <div class="card">
+        <h3>E-Commerce Backend</h3>
+        <p>REST APIs for authentication, catalog, and orders with Spring Boot & Hibernate; scaled to 2K+ users in tests.</p>
+        <div class="tech">Java • Spring Boot • Hibernate • MySQL</div>
+      </div>
+      <div class="card">
+        <h3>Library Management System</h3>
+        <p>Java Swing app with MySQL backend to maintain book inventory and member records.</p>
+        <div class="tech">Java • Swing • MySQL</div>
+      </div>
+    </div>
+  </section>
+  <section id="education" class="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>BCA (Completed):</strong> MGM College of Computer Science & IT, Nanded (S.R.T.M.U University), Graduated 2025, <b>CGPA: 8.63</b></li>
+      <li><strong>Python Developer Training:</strong> Adhyayan IT, Pune (Ongoing)</li>
+      <li><strong>HSC:</strong> Nutan Mahavidyalaya, Sailu — Maharashtra Board, 2022, <b>60%</b></li>
+      <li><strong>SSC:</strong> Nutan Vidyalaya, Sailu — Maharashtra Board, 2020, <b>74.8%</b></li>
+    </ul>
+  </section>
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <div class="panel">
+      <p>Email: <a href="mailto:naikakansha49@gmail.com">naikakansha49@gmail.com</a></p>
+    </div>
+    <div class="panel">
+      <p>Phone: <a href="tel:+917558439201">+91 75584 39201</a></p>
+    </div>
+    <div class="panel">
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/akansha-naik-015664336" target="_blank">linkedin.com/in/akansha-naik-015664336</a></p>
+    </div>
+    <div class="panel">
+      <p>Location: Pune, Maharashtra, India</p>
+    </div>
+  </section>
+  <footer>
+    <p>© <span id="y"></span> Akansha Naik • Portfolio Website</p>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
